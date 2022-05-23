@@ -10,7 +10,6 @@
  */
 
 ?>
-
 	<footer id="colophon" class="site-footer">
 		<div class="site-info">
 			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'clean' ) ); ?>">
@@ -29,6 +28,6 @@
 </div><!-- #page -->
 
 <?php wp_footer(); ?>
-
+<script src="/wp-content/themes/clean/js/common.js"></script>
 </body>
 </html>

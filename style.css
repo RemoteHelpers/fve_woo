@@ -1086,7 +1086,7 @@ textarea {
 	display: flex;
 	flex-wrap: wrap;
 	align-items: center;
-	justify-content: center;
+	justify-content: space-around;
 }
 .improve .improve__wrapper .improve__item {
 	display: flex;
@@ -1102,9 +1102,6 @@ textarea {
 .improve .improve__wrapper .improve__item p {
 	font-weight: 900;
 	font-size: 1.5rem;
-}
-.improve__item + .improve__item {
-	margin: 0 0 0 2%;
 }
 .improve .improve__wrapper .improve__item img {
 	height: 250px;
@@ -1136,4 +1133,95 @@ textarea {
 }
 .video-types .video-types__item {
 	width: 33%;
+}
+
+section.start-working {
+	margin-top: 187px;
+}
+.start-working__wrapper {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.start-working__items {
+	position: relative;
+}
+.start-working__item {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.start-working__item + .start-working__item {
+	margin-top: 3rem;
+}
+.start-working__item .start-working__text {
+	max-width: 240px;
+	font-size: 2rem;
+}
+.start-working__item .start-working__number {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 2.5rem;
+	font-weight: 900;
+	color: #fff;
+	width: 59px;
+	height: 59px;
+	margin: 0 0 0 2.5rem;
+	border-radius: 50%;
+	background-color: var(--orange);
+	z-index: 1;
+}
+.progress-container {
+	height: 100%;
+	width: 10px;
+	position: absolute;
+	top: 0px;
+	right: 25px;
+	background-color: #E0E0E0;
+}
+.progress-container .progress-bar {
+	width: 10px;
+	height: 0;
+	max-height: 100%!important;
+}
+
+.video-portfolio {
+	margin: 164px 0 0 0;
+}
+.video-portfolio__items {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+}
+.video-portfolio__item {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 32%;
+}
+.video-portfolio__item video {
+	width: 100%;
+	border-radius: 20px;
+}
+.video-portfolio__title {
+	margin-top: 20px;
+	font-size: 1.1rem;
+	font-weight: 700;
+	transition: .2s all;
+}
+.video-portfolio__item:hover .video-portfolio__title {
+	color: var(--orange);
+}
+.video-portfolio__description {
+	margin-top: 10px;
+	color: var(--text-color);
+}
+
+section.contact-form {
+	margin: 183px 0 0 0;
+	background: #F5F5F5;
+	padding: 120px 0 150px 0;
 }
