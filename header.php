@@ -18,6 +18,12 @@
 	<link rel="profile" href="https://gmpg.org/xfn/11">
 
 	<?php wp_head(); ?>
+
+	<link rel="stylesheet" type="text/css" href="/slick-1.8.1/slick/slick.css"/>
+   <link rel="stylesheet" type="text/css" href="/slick-1.8.1/slick/slick-theme.css"/>
+	<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+	
 </head>
 
 <body <?php body_class(); ?>>
@@ -29,14 +35,11 @@
 		<div class="container">
 			<div class="header__top"> 
 				<div class="site-branding"> 
-					<?php
-						the_custom_logo();
-					?>
-
-				</div><!-- .site-branding -->
-
+					<?php the_custom_logo(); ?>
+				</div>
+				<!-- .site-branding -->
 				<nav id="site-navigation" class="main-navigation">
-					<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'clean' ); ?></button>
+					<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"></button>
 					<?php
 					wp_nav_menu(
 						array(
@@ -45,7 +48,9 @@
 						)
 					);
 					?>
-				</nav><!-- #site-navigation -->
+				</nav>
+				<!-- #site-navigation -->
 			</div>
 		</div>
-	</header><!-- #masthead -->
+	</header>
+	<!-- #masthead -->

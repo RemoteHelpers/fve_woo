@@ -6,3 +6,5 @@ var height = document.querySelector('.start-working').offsetHeight;
 var scrolled = (winScroll / height) * 100;
 document.getElementById("myBar").setAttribute('style', `height: ${scrolled}%; background: var(--orange)`)
 }
+
+

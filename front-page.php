@@ -23,7 +23,6 @@ get_header();
       <h2><?php the_field('improve_title'); ?></h2>
       <div class="find-info__wrapper">
          <p class="find-info__text"><?php the_field('improve_description'); ?></p>
-         <img src="<?php echo esc_url($image_array['url']); ?>" >
          <?php 
          $image = get_field('improve_img');
          if( !empty($image) ): ?>
@@ -85,7 +84,7 @@ get_header();
                $specialist_image = $item['specialists_item_img'];
                if( !empty($specialist_image) ): ?>
                   <img src="<?php echo $specialist_image['url']; ?>" alt="<?php echo $specialist_image['alt']; ?>" />
-            <?php endif; ?>
+               <?php endif; ?>
             <h3><?= $item['specialists_item_title'] ?></h3>
             <p><?= $item['specialists_item_description'] ?></p>
          </div>
@@ -147,29 +146,34 @@ get_header();
 
    </div>
 
-   <section class="contact-form">
-      <div class="container">
-         <div class="contact-form__info">
-            <h2><?php the_field('contact_form_title'); ?></h2>
-            <p><?php the_field('contact_form_description'); ?></p>
-            <?php 
-            $contact_form_image = get_field('contact_form_image');
-            if( !empty($contact_form_image) ): ?>
-               <img src="<?php echo $contact_form_image['url']; ?>" alt="<?php echo $contact_form_image['alt']; ?>" />
-            <?php endif; ?>
-         </div>
-
-         <div class="contact-form__form">
-            <?php echo do_shortcode('[contact-form-7 id="114" title="Contact form 1"]'); ?>
-         </div>
-      </div>
-            
-   </section>
-
+   <?php include 'contact-form.php';?>
 
 </main>
 <!-- #main -->
-
+<script>
+   jQuery(document).ready(function() {
+   if (jQuery(window).width() < 550) {
+      jQuery(".improve__wrapper").addClass("slider");
+      jQuery(".video-portfolio__items").addClass("slider");
+    }
+    jQuery('.improve__wrapper.slider').slick({
+      dots: true,
+      arrow: false,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      autoplay: true,
+      autoplaySpeed: 4000,
+    })
+    jQuery('.video-portfolio__items.slider').slick({
+      dots: true,
+      arrow: false,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      autoplay: false,
+      autoplaySpeed: 4000,
+    })
+})
+</script>
 <?php
 //get_sidebar();
 get_footer();
